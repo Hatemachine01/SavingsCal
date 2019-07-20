@@ -1,2 +1,2 @@
 # SavingsCal
-build on sinatra 2.0.5
+built on sinatra 2.0.5
