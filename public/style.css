@@ -17,7 +17,9 @@ html, body {
 }
 
 h1 {
-	padding: 10px
+	padding: 10px;
+	text-shadow: 1px 1px #1d2124;
+
 }
 
 footer {
@@ -28,3 +30,4 @@ footer {
 }
 
 }
+
