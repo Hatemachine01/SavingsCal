@@ -23,7 +23,7 @@
 	       percentage you want to save: <input type="number" name="percentage"  placeholder = "%"><br><br>
 	      </div>      
 	    </form> 
-	     <button class="btn btn-primary" onclick="Calculator()">Calculate</button>   
+	     <button class="btn btn-primary" onclick="Validation()">Calculate</button>   
 	  </div>
 	
 	
@@ -33,6 +33,17 @@
   <p id="alternative3"></p>
 
   <script>
+  
+  function Validation() {
+  	var x = document.getElementById("frm1").elements.namedItem("total_income").value;
+  if (x !== "") {
+    Calculator();
+  } else {
+  	alert("Please fill the form");
+  	return false;
+  	}
+  }	
+
   function Calculator() {
     var total_income = document.getElementById("frm1").elements.namedItem("total_income").value;
     var percentage = document.getElementById("frm1").elements.namedItem("percentage").value;
