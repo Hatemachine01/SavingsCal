@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Savings Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+<div class="wrapper container cal">
+	<h1>Income Saving Calculator</h1>
+	  <div class="row h-100 justify-content-center align-items-center">
+	    <form class="col-12" id="frm1" action="">
+	      <div class="form-group">
+	        What was your take home this pay period?<input type="text" name="total_income" placeholder= "$" ><br>
+	      </div>
+	      <div class="form-group">
+	       percentage you want to save: <input type="text" name="percentage"  placeholder = "%"><br><br>
+	      </div>       
+	    </form> 
+	    <button class="btn btn-primary" onclick="Calculator()">Calculate</button>  
+	  </div>
+	
+	
+	<p id="results"></p>
+  <p id="alternative1"></p>
+  <p id="alternative2"></p>
+  <p id="alternative3"></p>
+
+  <script>
+  function Calculator() {
+    var total_income = document.getElementById("frm1").elements.namedItem("total_income").value;
+    var percentage = document.getElementById("frm1").elements.namedItem("percentage").value;
+    var result = Math.ceil(total_income / 100 * percentage) ;
+
+    document.getElementById("results").innerHTML = 'You can save: $ ' + result;
+    document.getElementById("alternative1").innerHTML ='15%: ' +  Math.ceil(total_income / 100 * 15);
+    document.getElementById("alternative2").innerHTML ='30%: ' +  Math.ceil(total_income / 100 * 30);
+    document.getElementById("alternative3").innerHTML ='45%: ' +  Math.ceil(total_income / 100 * 45);
+   }
+  </script>
+
+    <div class="push"></div>
+	</div>
+  
+  <footer class="footer">	   
+	   
+	    Written by
+	      <a href="https://www.juliovasquezdev.com">Julio Vasquez </a>
+
+  </footer>
+</body>
+</html>
