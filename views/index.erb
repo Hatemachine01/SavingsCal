@@ -3,10 +3,10 @@
 <head>
 	<title>Savings Calculator</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/f61f1697d7.js"></script>
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -20,17 +20,28 @@
 	        What was your take home this pay period ?<input type="number"  name="total_income" required placeholder= "$" ><br>
 	      </div>
 	      <div class="form-group">
-	       What percentage you want to save ? <input type="number" name="percentage"  placeholder = "%"><br><br>
+	       What percentage do you want to save ? <input type="number" name="percentage"  placeholder = "%"><br><br>
 	      </div>      
-	    </form> 
-	     <button class="btn btn-primary" onclick="Validation()">Calculate</button>   
+	    </form>    
+	     <button class="btn btn-primary" onclick="Validation()">Calculate </button>   
 	  </div>
-	
-	
-	<p id="results"></p>
+
+	  	<p id="results"></p>
   <p id="alternative1"></p>
   <p id="alternative2"></p>
   <p id="alternative3"></p>
+
+	<div class="card container">
+  <div class="card-body">
+    <h5 class="card-title"> The 50/20/30 rule of thumb <i class="fa fa-money" aria-hidden="true"></i> </h5>
+    <i class="far fa-money-bill-alt"></i>
+    <p class="card-text">Senator Elizabeth Warren popularized the 50/20/30 budget rule in her book “All Your Worth: The Ultimate Lifetime Money Plan.” The basic rule is to divide after-tax income, spending 50% on needs and 30% on wants while allocating 20% to savings.</p>
+    <a href="https://www.investopedia.com/ask/answers/022916/what-502030-budget-rule.asp" class="card-link">Read more</a>
+  </div>
+</div>
+	
+	
+
 
   <script>
   
@@ -39,7 +50,7 @@
   if (x !== "") {
     Calculator();
   } else {
-  	alert("Please fill out the form");
+  	alert("Something's wrong with your data");
   	return false;
   	}
   }	
